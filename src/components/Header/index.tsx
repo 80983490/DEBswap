@@ -7,8 +7,8 @@ import styled from 'styled-components'
 
 import Logo from '../../assets/svg/logo.svg'
 import LogoDark from '../../assets/svg/logo.svg'
-import Wordmark from '../../assets/svg/logo.svg'
-import WordmarkDark from '../../assets/svg/logo.svg'
+import Wordmark from '../../assets/svg/wordmark.svg'
+import WordmarkDark from '../../assets/svg/wordmark.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
@@ -149,8 +149,8 @@ export default function Header() {
             <UniIcon>
               <img src={isDark ? LogoDark : Logo} alt="logo" />
             </UniIcon>
-            <TitleText>       
-                  <img style={{ marginLeft: '4px', marginTop: '4px' }} src={isDark ? WordmarkDark : Wordmark} alt="logo" />
+            <TitleText>
+              <img style={{ marginLeft: '4px', marginTop: '4px' }} src={isDark ? WordmarkDark : Wordmark} alt="logo" />
             </TitleText>
           </Title>
         </HeaderElement>
@@ -178,42 +178,3 @@ export default function Header() {
     </HeaderFrame>
   )
 }
-//
-//return (
-//  <HeaderFrame>
-//    <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
-//      <HeaderElement>
-//        <Title href=".">
-//          <UniIcon>
-//           <img src={isDark ? LogoDark : Logo} alt="logo" />
-//        </UniIcon>
-//        <TitleText>       
-//               <img style={{ marginLeft: '4px', marginTop: '4px' }} src={isDark ? WordmarkDark : Wordmark} alt="logo" />
-//        </TitleText>
-//      </Title>
-//   </HeaderElement>
-//   <HeaderControls>
-//     <HeaderElement>
-//      <TestnetWrapper>
-//        {!isMobile && chainId && NETWORK_LABELS[chainId] && <NetworkCard>{NETWORK_LABELS[chainId]}</NetworkCard>}
-//      </TestnetWrapper>
-//     <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
-//       {account && userEthBalance ? (
-//       <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
-//          {userEthBalance?.toSignificant(4)} HT 
-//      </BalanceText>
-//    ) : null}
-//    <Web3Status />
-//   </AccountElement>
-//   </HeaderElement>
-//    <HeaderElementWrap>
-//        <VersionSwitch />
-//        <Settings />
-//        <Menu />
-//      </HeaderElementWrap>
-//    </HeaderControls>
-//  </RowBetween>
-//  </HeaderFrame>
-//)
-//}
-//余额名称显示
